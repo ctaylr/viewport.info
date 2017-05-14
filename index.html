@@ -1,0 +1,158 @@
+<!DOCTYPE html >
+<html lang="en"  xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+	<head>
+
+		<title>Viewport.Info | Browser capabilities, viewport size information &amp; debugging info</title>
+		<meta name="description" content="Provides information about the browser you are currently on, to aid webdevelopers and debugging."/>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<meta name="keywords" content="browser,metrics,viewport,size,browser size,os,ip address"/>
+		<meta name="copyright" content="Chris Taylor"/>
+		<meta name="language" content="English"/> 
+		<meta name="web_author" content="Chris Taylor"/>
+
+		<script type="text/javascript" src="js/modernizr.js"></script>
+		<link href='http://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'/>
+		<link rel="stylesheet" media="all" type="text/css" href="css/main.css" />
+		<link rel="icon" type="image/ico" href="favicon.ico"/>
+      	
+      	<script>
+  			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  			})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  			ga('create', 'UA-3717291-10', 'auto');
+  			ga('send', 'pageview');
+
+		</script>
+
+	</head>
+	<body class="initial">
+		<div class="container">
+			<h1>Viewport<span>.Info</span></h1>
+			<h2>Handy browser debugging info</h2>
+			
+			<p class="loading">Loading...</p>
+
+			<table class="results" id="windowProperties">
+				<caption>Current Viewport Properties</caption>
+				<tbody>
+					<tr>
+						<th><span>Screen Size</span> <small>screen.width x screen.height</small></th>
+						<td id="ScreenDimensions"></td>
+					</tr>
+					<tr>
+						<th><span>Window Size </span> <small>$(window)</small></th>
+						<td id="WindowDimensions"></td>
+					</tr>
+					<tr>
+						<th><span>Document element size</span> <small>$(document)</small></th>
+						<td id="DocumentDimensions"></td>
+					</tr>					
+					<tr>
+						<th><span>Document Body Size</span> <small>$("body")</small></th>
+						<td id="BodyDimensions"></td>
+					</tr>
+					<tr>
+						<th><span>Orientation</span> <small>window.orientation</small></th>
+						<td id="WindowOrientation"></td>
+					</tr>
+				</tbody>
+			</table>
+
+			<hr />
+
+			<table class="results" id="ClientInfo">
+				<caption>Client Information</caption>
+				<tbody>
+					<tr>
+						<th><span>IP Address</span></th>
+						<td id="IpAddress"></td>
+					</tr>
+					<tr>
+						<th><span>User agent</span></th>
+						<td id="UserAgent"></td>
+					</tr>
+
+				</tbody>
+			</table>
+
+			<hr />
+
+			<table class="results" id="HtmlFeatures">
+				<caption>Browser Capabilities</caption>
+				<tbody>
+					<tr>
+						<th><span>Geolocation</span></th>
+						<td id="Geolocation"></td>
+					</tr>
+					<tr>
+						<th><span>LocalStorage</span></th>
+						<td id="LocalStorage"></td>
+					</tr>
+					<tr>
+						<th><span>SessionStorage</span></th>
+						<td id="SessionStorage"></td>
+					</tr>
+					<tr>
+						<th><span>HTML5 Audio</span></th>
+						<td id="HtmlAudio"></td>
+					</tr>
+					<tr>
+						<th><span>HTML5 Video</span></th>
+						<td id="HtmlVideo"></td>
+					</tr>
+					<tr>
+						<th><span>Flexbox</span></th>
+						<td id="Flexbox"></td>
+					</tr>
+				</tbody>
+			</table>
+
+			<hr />
+
+			<table class="results">
+				<caption>Other API's</caption>
+				<tbody>
+					<tr>
+						<th><span>Touch events API</span></th>
+						<td id="TouchEvents"></td>
+					</tr>
+					<tr>
+						<th><span>Canvas support</span></th>
+						<td id="CanvasSupport"></td>
+					</tr>
+					<tr>
+						<th><span>WebGL Support</span></th>
+						<td id="WebGL"></td>
+					</tr>
+					<tr>
+						<th><span>SVG Support</span></th>
+						<td id="SVG"></td>
+					</tr>
+					<tr>
+						<th><span>Flash player</span></th>
+						<td id="Flash"></td>
+					</tr>
+					<tr>
+						<th><span>History API</span></th>
+						<td id="HistoryAPI"></td>
+					</tr>
+				</tbody>
+			</table>
+
+		</div>
+
+		<section class="CopyPaste">
+			<input type="button" value="Copy report to clipboard" id="copyButton"/>
+		</section>
+
+		<footer>
+			<p>Version 0.1 | &copy; 2015 Chris Taylor - <a href="http://ctaylr.net" target="_blank">http://ctaylr.net</a></p>
+		</footer>
+		
+		<script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
+		<script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+		<script type="text/javascript" src="js/viewport.min.js"></script>
+	</body>
+</html>
