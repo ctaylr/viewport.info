@@ -19,7 +19,7 @@ var ViewPortInfo = {
 	"testBrowser": function(){
 		var hasFlash = ((typeof navigator.plugins != "undefined" && typeof navigator.plugins["Shockwave Flash"] == "object") || (window.ActiveXObject && (new ActiveXObject("ShockwaveFlash.ShockwaveFlash")) !== false));
 		$('#UserAgent').text(navigator.userAgent);
-		$.getJSON( "http://api.ipify.org?format=json", function(data){
+		$.getJSON( "//api.ipify.org?format=json", function(data){
            $('#IpAddress').text(data.ip);
            $('body').removeClass('initial');
         }).fail(function(){
